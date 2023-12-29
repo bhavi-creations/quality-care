@@ -1116,7 +1116,9 @@ input[type=color] {
   top: 120%;
   left: 0;
   width: 240px;
-  padding: 20px 30px;
+  padding-left: 20px ;
+  padding-top:10px;
+  padding-bottom: 10px;
   background: var(--tp-theme-primary);
   opacity: 0;
   visibility: hidden;
