@@ -53,14 +53,14 @@
   */
   --tp-common-white: #ffffff;
   --tp-common-black: #000;
-  --tp-heading-primary: #171151;
+  --tp-heading-primary: #0F3661;
   --tp-grey-1: #F2F5FA;
-  --tp-text-body: #171151;
+  --tp-text-body:#0F3661;
   --tp-text-1: #A9B7D1;
   --tp-text-2: #8A879F;
   --tp-text-3: #B7B6C4;
-  --tp-theme-primary: #171151;
-  --tp-theme-secondary: #10D0A1;
+  --tp-theme-primary: #0F3661;
+  --tp-theme-secondary: #63A238;
   --tp-theme-blue: #0E63FF;
   --tp-theme-pink: #F72A75;
   --tp-theme-sky: #42BFFF;
@@ -68,7 +68,7 @@
   --tp-border-secondary: #D1D6E0;
   --tp-icon-blue: #0E63FF;
   --tp-icon-blue-light: #E7efFF;
-  --tp-icon-green: #10D0A1;
+  --tp-icon-green: #63A238;
   --tp-icon-green-light: #E7FAF6;
   --tp-icon-pink: #F72A75;
   --tp-icon-pink-light: #FEEAf1;
@@ -8287,3 +8287,33 @@ p.checkout-coupon input[type=text]:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+.fb_icon{
+  width: 100px;
+}
+
+.table_cunt {
+  width: 80%;
+  margin: auto; 
+  margin-bottom: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-y: auto; /* Add vertical scrollbar */
+  max-height: 50px;  
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
