@@ -6228,6 +6228,9 @@ div.tp-srv-link a {
     font-size: 14px;
   }
 }
+.del_price{
+  font-size: 25px;
+}
 .research-item__btn {
   display: inline-block;
   font-size: 14px;
@@ -6305,7 +6308,7 @@ div.tp-srv-link a {
   font-weight: 600;
   letter-spacing: 2px;
   display: inline-block;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .tp-price__content p {
   font-size: 20px;
