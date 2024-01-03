@@ -3,12 +3,12 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Quality Care Labs</title>
+      <title>Bioxlab - Laboratory & Science Research</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/web logo.png">
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
 
       <!-- CSS here -->
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -23,26 +23,26 @@
       <link rel="stylesheet" href="assets/css/nice-select.css">
       <link rel="stylesheet" href="assets/css/meanmenu.css">
       <link rel="stylesheet" href="assets/css/style.css">
-
-      <script src="https://kit.fontawesome.com/742df65007.js" crossorigin="anonymous"></script>
    </head>
    <body>
-      
+      <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
 
       <!-- Scroll-top -->
       <button class="scroll-top scroll-to-target" data-target="html">
          <i class="fas fa-angle-up"></i>
       </button>
-      <!-- Scroll-top-end-->   
+      <!-- Scroll-top-end--> 
       
       <!-- preloader -->
       <div id="preloadertp">
-         <img src="assets/img/logo (1).png" alt="" style="width: 250px;">
+         <img src="assets/img/preloader.png" alt="">
       </div>
-      <!-- preloader end  -->      
+      <!-- preloader end  -->
 
-      <!-- header-area -->
-      <header class="d-none d-xl-block">
+       <!-- header-area -->
+       <header class="d-none d-xl-block">
          <div class="header-custom" id="header-sticky">
             <div class="header-logo-box">
                <a href="index.html"><img src="assets/img/logo (1).png" alt="logo"></a>
@@ -248,6 +248,8 @@
          </div>
       </div>   
       <!-- sidebar-info-end -->
+
+      <div class="body-overlay"></div>                       
       
       <!-- main-area -->
       <main>
@@ -256,279 +258,258 @@
          <section class="breadcrumb__area pt-100 pb-120 breadcrumb__overlay" data-background="assets/img/banner/breadcrumb-01.jpg">
             <div class="container">
                <div class="row align-items-center">
-                  <div class="col-xl-6 col-lg-7 col-md-12 col-12">
+                  <div class="col-lg-6 col-md-7 col-12">
                      <div class="tp-breadcrumb">
-                        <h2 class="tp-breadcrumb__title">Services-Details</h2>
+                        <h2 class="tp-breadcrumb__title">Blog</h2>
                      </div>
                   </div>
-                  <div class="col-xl-6 col-lg-5 col-md-12 col-12">
-                     <div class="tp-breadcrumb__link serv-md d-flex">
-                        <span>Bioxlab : <a href="services-details.html"> Services-Details</a></span>
+                  <div class="col-lg-6 col-md-5 col-12">
+                     <div class="tp-breadcrumb__link d-flex align-items-center">
+                        <span>Bioxlab : <a href="blog.html"> Blog</a></span>
                      </div>
                   </div>
                </div>
             </div>
          </section>
          <!-- breadcrumb-area-end -->
-
-         <!-- services-details-area -->
-         <section class="services-details pt-130 pb-120">
+      
+         <!-- postbox area start -->
+         <div class="postbox-area pt-120 pb-80">
             <div class="container">
                <div class="row">
-                  <div class="col-lg-6 col-md-12">
-                     <div class="services-thumb-img mb-50 wow fadeInLeft" data-wow-delay=".4s">
-                        <img src="assets/img/services/services-thumb-07.jpg" alt="services-thumb">
+                  <div class="col-xxl-8 col-xl-8 col-lg-7 col-md-12">
+                     <div class="postbox pr-20 pb-50">
+                        <article class="postbox__item format-image mb-60 transition-3">
+                           <div class="postbox__thumb w-img mb-35">
+                              <a href="blog-details.html">
+                                 <img src="assets/img/blog/blog-in-01.jpg" alt="blog-thumg">
+                              </a>
+                           </div>
+                           <div class="postbox__content">
+                              <div class="postbox__meta mb-40">
+                                 <span><a href="team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
+                                 <span><i class="fa-regular fa-clock"></i> Dec 28, 2022</span>
+                                 <span><a href="about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
+                                 <span><i class="fa-light fa-eye"></i> 1,526 views</span>
+                              </div>
+                              <h3 class="postbox__title mb-40">
+                                 <a href="blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
+                              </h3>
+                              <div class="postbox__text mb-40">
+                                 <p>Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory</p>
+                              </div>
+                              <div class="postbox__read-more">
+                                 <a href="blog-details.html" class="tp-btn">Reade more</a>                               
+                              </div>
+                           </div>
+                        </article>
+                        <article class="postbox__item format-image mb-60 transition-3">
+                           <div class="postbox__thumb postbox-active swiper-container w-img p-relative mb-35">
+                              <div class="swiper-wrapper">
+                                 <div class="postbox__slider-item swiper-slide">
+                                    <img src="assets/img/blog/blog-in-02.jpg" alt="">
+                                 </div>
+                                 <div class="postbox__slider-item swiper-slide">
+                                    <img src="assets/img/blog/blog-in-01.jpg" alt="">
+                                 </div>
+                                 <div class="postbox__slider-item swiper-slide">
+                                    <img src="assets/img/blog/blog-in-03.jpg" alt="">
+                                 </div>
+                              </div>
+                              <div class="postbox-nav">
+                                 <button class="postbox-slider-button-next"><i class="fa-solid fa-chevron-right"></i></button>
+                                 <button class="postbox-slider-button-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                              </div>
+                           </div>
+                           <div class="postbox__content">
+                              <div class="postbox__meta mb-40">
+                                 <span><a href="team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
+                                 <span><i class="fa-regular fa-clock"></i> Dec 28, 2022</span>
+                                 <span><a href="about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
+                                 <span><i class="fa-light fa-eye"></i> 1,526 views</span>
+                              </div>
+                              <h3 class="postbox__title mb-40">
+                                 <a href="blog-details.html">Lavoratories used for scientic reseach take many froms.</a>
+                              </h3>
+                              <div class="postbox__text mb-40">
+                                 <p>Laboratories used for scientific research take many forms because of the differing requirements of specialists in the various fields of science and engineering. A physics laboratory</p>
+                              </div>
+                              <div class="postbox__read-more">
+                                 <a href="blog-details.html" class="tp-btn">read more</a>
+                              </div>
+                           </div>
+                        </article>
+                        <article class="postbox__item format-video mb-60 transition-3">
+                           <div class="postbox__thumb postbox__video p-relative w-img mb-35">
+                              <a href="blog-details.html">
+                                 <img src="assets/img/blog/blog-in-03.jpg" alt="">
+                              </a>
+                              <a href="https://www.youtube.com/watch?v=OMqWRlxo1oQ" class="play-btn popup-video"><i class="fas fa-play"></i></a>
+                           </div>
+                           <div class="postbox__content">
+                              <div class="postbox__meta mb-40">
+                                 <span><a href="team-details.html"><i class="fa-regular fa-user"></i> Alextina</a></span>
+                                 <span><i class="fa-regular fa-clock"></i> Dec 28, 2022</span>
+                                 <span><a href="about.html"><i class="fa-regular fa-message-dots"></i> (04) Coments</a></span>
+                                 <span><i class="fa-light fa-eye"></i> 1,526 views</span>
+                              </div>
+                              <h3 class="postbox__title mb-40">
+                                 <a href="blog-details.html">Four Ways to Fullfill Your Task For Makes Parents Happy and Healthy</a>
+                              </h3>
+                              <div class="postbox__text mb-40">
+                                 <p>Compellingly exploit B2B vortals with emerging total linkage. Appropriately pursue strategic leadership whe intermandated ideas. Proactively revolutionize interoperable "outside the box" thinking with fully researched innovation. Dramatically facilitate exceptional architectures and bricks-and-clicks data. Progressively genera extensible e-services for.</p>
+                              </div>
+                              <div class="postbox__read-more">
+                                 <a href="blog-details.html" class="tp-btn">read more</a>
+                              </div>
+                           </div>
+                        </article>
+                        <div class="basic-pagination">
+                           <nav>
+                              <ul>
+                                 <li>
+                                    <a href="blog.html">
+                                       <i class="fa-light fa-arrow-left-long"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="blog.html">1</a>
+                                 </li>
+                                 <li>
+                                    <span class="current">2</span>
+                                 </li>
+                                 <li>
+                                    <a href="blog.html">3</a>
+                                 </li>
+                                 <li>
+                                    <a href="blog.html">...</a>
+                                 </li>
+                                 <li>
+                                    <a href="blog.html">
+                                       <i class="fa-light fa-arrow-right-long"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-12">
-                     <div class="services-thumb-img mb-50 wow fadeInRight" data-wow-delay=".4s">
-                        <img src="assets/img/services/services-thumb-08.jpg" alt="services-thumb">
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="tp-srv-process mb-50">
-                        <h4 class="tp-srv-process__title mb-30">Memoglobin Test Process</h4>
-                        <p class="mb-20">Must explain to you how all this mistaken idea of denouncing works pleasure and praising uts pain was born and I will gives you a itself completed account of the system, and sed expounds the ut actual teachings of that greater sed explores truth. Denouncing works pleasures and praising pains was us born and I will gives you a completed ut workers accounts of the system. sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <p class="mb-40">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.</p>
-                        <div class="tp-srv-process__list">
-                           <ul>
-                              <li><i class="fa-solid fa-check"></i>Consectetur, adipisci velit, sed quia non numquam eius modi </li>
-                              <li><i class="fa-solid fa-check"></i>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremquen</li>
-                              <li><i class="fa-solid fa-check"></i>Ut enim ad minima veniam, quis nostrum exercitationem</li>
-                              <li><i class="fa-solid fa-check"></i>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</li>
-                           </ul>
+                  <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-12">
+                     <div class="sidebar__wrapper pl-25 pb-50">
+                        <div class="sidebar__widget mb-45">
+                           <div class="sidebar__widget-content">
+                              <h3 class="sidebar__widget-title mb-25">Search</h3>
+                              <div class="sidebar__search">
+                                 <form action="#">
+                                    <div class="sidebar__search-input-2 p-relative">
+                                       <input type="text" placeholder="Search post">
+                                       <button type="submit"><i class="far fa-search"></i></button>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sidebar__widget mb-40">
+                           <h3 class="sidebar__widget-title mb-25">Category</h3>
+                           <div class="sidebar__widget-content">
+                              <ul>
+                                 <li><a href="blog-details.html">Chemistry<span>03</span></a></li>
+                                 <li><a href="blog-details.html">Forensic science <span>07</span></a></li>
+                                 <li><a href="blog-details.html">Gemological <span>09</span></a></li>
+                                 <li><a href="blog-details.html">COvid Analysis <span>01</span></a></li>
+                                 <li><a href="blog-details.html">Becteriology <span>00</span></a></li>
+                                 <li><a href="blog-details.html">Angiosperm <span>26</span></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="sidebar__widget mb-55">
+                           <h3 class="sidebar__widget-title mb-25">Recent Post</h3>
+                           <div class="sidebar__widget-content">
+                              <div class="sidebar__post rc__post">
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-1.jpg" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <div class="rc__meta">
+                                          <span>4 March. 2022</span>
+                                       </div>
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Don't Underestimate Tree for Medicine</a>
+                                       </h3>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-2.jpg" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <div class="rc__meta">
+                                          <span>12 February. 2022</span>
+                                       </div>
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Equipping Researchers in the Developing World</a>
+                                       </h3>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-3.jpg" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <div class="rc__meta">
+                                          <span>14 January. 2022</span>
+                                       </div>
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Role of Genetics in treating Heigh-grade glioma</a>
+                                       </h3>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/sidebar/blog-sm-4.jpg" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <div class="rc__meta">
+                                          <span>18 March. 2021</span>
+                                       </div>
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Research And Verify of a Covid-19 Virus</a>
+                                       </h3>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sidebar__widget mb-55">
+                           <h3 class="sidebar__widget-title mb-25">Popular Tag</h3>
+                           <div class="sidebar__widget-content">
+                              <div class="tagcloud">
+                                 <a href="blog-details.html">Covid-19</a>
+                                 <a href="blog-details.html">Gene</a>
+                                 <a href="blog-details.html">Test</a>
+                                 <a href="blog-details.html">Lab</a>
+                                 <a href="blog-details.html">data</a>
+                                 <a href="blog-details.html">Virus</a>
+                                 <a href="blog-details.html">Pandemic </a>
+                                 <a href="blog-details.html">Symptoms</a>
+                                 <a href="blog-details.html">Medicine</a>
+                                 <a href="blog-details.html">Bacteria</a>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="tp-srv-stap mb-40">
-                        <h4 class="tp-srv-stap__title mb-25">4 Simple Steps</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
-                        <p>Must explain to you how all this mistaken idea of denouncing works pleasure and praising uts pain was born and I will gives you a itself completed account of the system, and sed expounds the ut actual teachings of that greater sed explores truth. Denouncing works pleasures and praising pains was us born and I will gives you a completed ut workers accounts of the system. sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem.</p>
-                     </div>
-                  </div>
-                  <div class="col-xl-3 col-lg-4 col-md-6">
-                     <div class="tp-srv-stap__list mb-30 wow fadeInUp" data-wow-delay=".2s">
-                        <ul>
-                           <li><i class="fa-solid fa-check"></i>Extramural Funding</li>
-                           <li><i class="fa-solid fa-check"></i>Bacteria Markers</li>
-                           <li><i class="fa-solid fa-check"></i>Nam nec mi euismod euismod</li>
-                           <li><i class="fa-solid fa-check"></i>In aliquet dui nec lectus</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-4 col-md-6">
-                     <div class="tp-srv-stap__list ml-65 mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <ul>
-                           <li><i class="fa-solid fa-check"></i>Extramural Funding</li>
-                           <li><i class="fa-solid fa-check"></i>Bacteria Markers</li>
-                           <li><i class="fa-solid fa-check"></i>Nam nec mi euismod euismod</li>
-                           <li><i class="fa-solid fa-check"></i>In aliquet dui nec lectus</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-xl-5 col-lg-4 col-md-6">
-                     <div class="tp-srv-stap__list ml-65 ml-20 mb-30 wow fadeInUp" data-wow-delay=".6s">
-                        <ul>
-                           <li><i class="fa-solid fa-check"></i>Extramural Funding</li>
-                           <li><i class="fa-solid fa-check"></i>Bacteria Markers</li>
-                           <li><i class="fa-solid fa-check"></i>Nam nec mi euismod euismod</li>
-                           <li><i class="fa-solid fa-check"></i>In aliquet dui nec lectus</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="tp-srv-research mb-50">
-                        <h4 class="tp-srv-research__title mb-25">Our Research</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <!-- <div class="row">
-                  <div class="col-md-12">
-                     <div class="tp-srv-bg mb-70">
-                        <img src="assets/img/services/services-thumb-09.jpg" alt="services-bg">
-                     </div>
-                     <div class="services-link tp-srv-link">  
-                        <span>Laboratories Used For Scientific Research :<a href="contact.html">OUr Project<i class="fa-solid fa-arrow-right"></i></a></span>
-                     </div>
-                  </div>
-               </div> -->
             </div>
-         </section>
-         <!-- services-details-area-end -->
-
-         <!-- support-area -->
-         <!-- <section class="support-area grey-bg pt-125 pb-130">
-            <div class="container">
-               <div class="row text-center">
-                  <div class="col-lg-12 col-md-12 col-12">
-                     <div class="tp-section">
-                        <span class="tp-section__sub-title left-line right-line mb-20">Get in touch</span>
-                        <h3 class="tp-section__title mb-70">Need Any Help</h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="row justify-content-center">
-                  <div class=" col-xl-10 col-lg-12 col-md-12 col-12">
-                     <div class="tp-support-form text-center">
-                        <span>Derect Contact with us</span>
-                        <form action="#">
-                           <input type="text" placeholder="Enter your Name">
-                           <input type="text" placeholder="Enter your Mail">
-                           <textarea name="massage" placeholder="Type your massage"></textarea>
-                        </form>
-                        <div class="tp-support-form__btn">
-                           <button class="tp-btn">Send Massage</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section> -->
-         <!-- support-area-end -->
-
-
-         <div class="container  table_cunt">
-            <h2>Quality Lab Information</h2>
-            
-         <div class="table-responsive"  style="max-height:500px; overflow-y: auto;">
-
-            <table >
-
-
-                  <tr>
-                     <th class="text-center">s.no</th>  
-                     <th  class="text-center">Test Code</th> 
-                     <th class="text-center">Test Name</th>
-                     <th class="text-center">Price</th>
-                     <th class="text-center">Special Price</th>
-                     <th class="text-center">Add to cart</th>
-                  </tr>
-                  
-                  <tr>
-                     <td  class="text-center">1</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                        
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">2</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">3</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">4</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">5</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">6</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">7</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">8</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">9</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-
-                  <tr>
-                     <td  class="text-center">10</td>
-                     <td  >       </td>
-                     <td  >DEPARTMENT OF MOLECULARBIOLOGY & CYTOGENETICS</td>
-                     <td class="text-center">       </td>
-                     <td  class="text-center">      </td>
-                     
-                     <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>          
-                  </tr>
-            
- 
-            
-            </table>
-
          </div>
-
-      </div>
-
-
+         <!-- postbox area end -->         
 
       </main>
       <!-- main-area-end -->
 
-      <!-- footer-area -->
-      <footer mt-5>
+       <!-- footer-area -->
+       <footer mt-5>
          <div class="footer-area theme-bg pt-50  ">
             <div class="container">
                <div class="row">
@@ -541,7 +522,7 @@
                         <div class="footer-widget__social">
                             <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 "><i class="fa-brands fa-facebook-f"></i></a>
                             <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== "><i class="fa-brands fa-instagram"></i></a>
-   
+
                          </div>
                      </div>
                   </div>
@@ -553,7 +534,7 @@
                               <li><a href="index.html">Home</a></li>
                               <li><a href="about.html">About us</a></li>
                               <li><a href="lab.html">Lab</a></li>
-   
+
                               <li><a href="services.html">Services</a></li>
                               <li><a href="packages.html">Packages</a></li>
                               <li><a href="contact.html">Contact us</a></li>
@@ -594,7 +575,7 @@
                </div>
             </div>
          </div>
-   
+
         
          <div class="footer-area-bottom theme-bg">
             <div class="container">
@@ -618,23 +599,23 @@
       </footer>
       <!-- footer-area-end -->
 
-      <!-- JS here -->
-      <script src="assets/js/jquery.js"></script>
-      <script src="assets/js/waypoints.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/swiper-bundle.js"></script>
-      <script src="assets/js/slick.js"></script>
-      <script src="assets/js/magnific-popup.js"></script>
-      <script src="assets/js/counterup.js"></script>
-      <script src="assets/js/wow.js"></script>
-      <script src="assets/js/isotope-pkgd.js"></script>
-      <script src="assets/js/imagesloaded-pkgd.js"></script>
-      <script src="assets/js/ajax-form.js"></script>
-      <script src="assets/js/nice-select.js"></script>
-      <script src="assets/js/aos.js"></script>
-      <script src="assets/js/meanmenu.js"></script>
-      <script src="assets/js/jquery.appear.js"></script>
-      <script src="assets/js/jquery.knob.js"></script>
-      <script src="assets/js/main.js"></script>
-   </body>
+   <!-- JS here -->
+   <script src="assets/js/jquery.js"></script>
+   <script src="assets/js/waypoints.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/slick.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/counterup.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/ajax-form.js"></script>
+   <script src="assets/js/aos.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/jquery.appear.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/jquery.knob.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
 </html>
