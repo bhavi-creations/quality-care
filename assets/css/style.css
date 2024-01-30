@@ -78,6 +78,7 @@
   --tp-icon-tweet: #1DA1F2;
   --tp-icon-fb: #4267B2;
   --tp-icon-skype: #00A6E4;
+
 }
 
 * {
@@ -1862,6 +1863,9 @@ input[type=color] {
 }
 .tpsideinfo__socialicon a:hover {
   color: var(--tp-theme-secondary);
+}
+.fa-facebook-f a:hover {
+  color: var(--tp-icon-fb);
 }
 
 .tpcarticon {
@@ -5204,7 +5208,7 @@ div.tp-srv-link a {
   height: 385px;
   width: 100%;
   border-radius: 5px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 /*----------------------------------------*/
@@ -7966,6 +7970,29 @@ p.checkout-coupon input[type=text]:focus {
   border: 1px solid var(--tp-icon-fb);
   background-color: var(--tp-icon-fb);
 }
+.tp-f-inst:hover.tp-f-inst  i {
+  color: var(--tp-common-white);
+  border: 1px solid var(--tp-icon-fb);
+  background-color: var(  --tp-icon-pink);
+}
+.tp-f-linkedin:hover.tp-f-linkedin i { 
+  color: var(--tp-common-white);
+  border: 1px solid var(--tp-icon-fb);
+  background-color: var(   --tp-icon-blue);
+}
+
+.tp-f-youtube:hover.tp-f-youtube i { 
+  color: var(--tp-common-white);
+  border: 1px solid var(--tp-icon-fb);
+  background-color: var(   --tp-icon-red);
+}rgb(230, 0, 35);
+
+.tp-f-pinterest:hover.tp-f-pinterest i { 
+  color: var(--tp-common-white);
+  border: 1px solid var(--tp-icon-fb);
+  background-color: rgb(230, 0, 35);;
+}
+
 
 .tp-f-skype:hover.tp-f-skype i {
   color: var(--tp-common-white);
