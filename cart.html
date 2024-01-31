@@ -185,7 +185,7 @@
       <div class="footer-widget__social mb-30 " >
          <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
          <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram" ></i></a>
-         <a class="tp-f-youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></i></a>
+         <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
          <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
          <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
          <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -196,9 +196,9 @@
       <div class="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">
          <span>Get Update</span>
          <div class="tpsideinfo__content-inputarea-input">
-            <form action="#">
-               <input type="email" placeholder="Enter Mail">
-               <button class="tpsideinfo__content-inputarea-input-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            <form action="onlyMail.php" method="post">
+               <input name="mail" type="email" placeholder="Enter Mail" required>
+               <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
          </div>
       </div>
@@ -239,7 +239,7 @@
                <div class="row">
                   <h2 class="text-center">Cart Items</h2>
                   <div class="col-12">
-                        <form action="#">
+                        <form action="cartMail.php" method="post">
                            <div class="table-content table-responsive">
                               <table class="table">
                                     <thead>
@@ -298,7 +298,7 @@
                            <!-- checkout-area start -->
                            <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
                               <div class="container">
-                                 <form action="#">
+                                 <form action="#" method="post">
                                     <div class="row">
                                           <div class="col-lg-12 col-md-12">
                                              <div class="checkbox-form">
@@ -307,52 +307,52 @@
                                                        <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>First Name <span class="required">*</span></label>
-                                                            <input type="text" placeholder="" />
+                                                            <input name="first_name" type="text" placeholder="" required />
                                                          </div>
                                                       </div>
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Last Name <span class="required">*</span></label>
-                                                            <input type="text" placeholder="" />
+                                                            <input name="last_name" type="text" placeholder="" required />
                                                          </div>
                                                       </div>
                                                       
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Address-1<span class="required">*</span></label>
-                                                            <input type="text" placeholder="D.no, Apartment " />
+                                                            <input name="address" type="text" placeholder="D.no, Apartment " required/>
                                                          </div>
                                                       </div>
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Address-2<span class="required">*</span></label>
-                                                            <input type="text" placeholder="Street address" />
+                                                            <input name="address2" type="text" placeholder="Street address" required/>
                                                          </div>
                                                       </div>
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Town / City <span class="required">*</span></label>
-                                                            <input type="text" placeholder="Town / City" />
+                                                            <input name="location" type="text" placeholder="Town / City" required/>
                                                          </div>
                                                       </div>
                                                       
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Pin code <span class="required">*</span></label>
-                                                            <input type="text" placeholder="Postcode  " />
+                                                            <input name="pin_code" type="text" placeholder="Postcode  " required/>
                                                          </div>
                                                       </div>
                                                      
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Phone <span class="required">*</span></label>
-                                                            <input type="text" placeholder=" " />
+                                                            <input name="number" type="text" placeholder=" " required/>
                                                          </div>
                                                       </div>
                                                       <div class="col-md-6">
                                                          <div class="checkout-form-list">
                                                             <label>Email Address <span class="required">*</span></label>
-                                                            <input type="email" placeholder="" />
+                                                            <input name="mail" type="email" placeholder="" required/>
                                                          </div>
                                                       </div>
                                                    
@@ -360,17 +360,29 @@
                                              
                                              </div>
                                           </div>
+
+<!-- 
+                                          <div class="col-lg-12">
+                                             <div class="contactform__input mb-30-btn">
+                                                <button type="submit" class="tp-btn">Send Massage</button>
+                                             </div>
+                                             <p class="ajax-response"></p>
+                                          </div> -->
+                                        
                                     </div>
                                  </form>
                               </div>
                            </section>
                            <!-- checkout-area end -->
+
+
+                           
                         </form> 
                   </div>
 
-                  <div class="col-6  d-flex flex-row justify-content-start"  >
+                   <div class="col-6  d-flex flex-row justify-content-start"  >
                      <a class="header-bottom-btn" style=" border-radius: 8px;" href="index.html#appointment ">Send Request</a>
-                  </div>
+                  </div>  
  
                   <div class="col-6 d-flex flex-row justify-content-end">
                      <a class="header-bottom-btn" style="border-radius: 8px;" href="./services.html">ADD MORE</a>
@@ -402,7 +414,7 @@
                         <div class="footer-widget__social">
                            <a class="tp-f-fb" href="https://www.facebook.com/profile.php?id=61553810283752 " target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                            <a class="tp-f-inst" href="https://www.instagram.com/quality_care_lab?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA== " target="_blank"><i class="fa-brands fa-instagram" ></i></a>
-                           <a class="tp-f-youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></i></a>
+                           <a class="tp-f-youtube" href="https://www.youtube.com/@Quality_Care_Lab" target="_blank"><i class="fab fa-youtube"></i></i></a>
                            <a class="tp-f-fb" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                            <a class="tp-f-pinterest" href="https://in.pinterest.com/labqualitycare6/" target="_blank"><i class="fab fa-pinterest"></i></a>
                            <a class="tp-f-linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -449,9 +461,9 @@
                         <h4 class="footer-widget__title mb-20">Mailing</h4>
                         <p>Sign up for our mailing list to get</p>
                         <div class="footer-widget__newsletter p-relative">
-                           <form action="#">
-                              <input type="email" placeholder="Enter Mail">
-                              <button class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                           <form action="onlyMail.php" method="post">
+                              <input name="mail" type="email" placeholder="Enter Mail" required>
+                              <button type="submit" class="footer-widget__fw-news-btn"><i class="fa-solid fa-paper-plane"></i></button>
                            </form>
                         </div>
                      </div>
