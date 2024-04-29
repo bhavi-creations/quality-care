@@ -265,12 +265,12 @@
             <div class="row">
                <div class="col-lg-6 col-md-12">
                   <div class="services-thumb-img mb-30 wow fadeInLeft" data-wow-delay=".4s">
-                     <img src="assets/img/Micro-biology-image-1.png" alt="services-thumb">
+                     <img src="assets/img/Micro-biology-image-1.png" alt="services-thumb"  class="img-fluid">
                   </div>
                </div>
                <div class="col-lg-6 col-md-12">
                   <div class="services-thumb-img mb-30 wow fadeInRight" data-wow-delay=".4s">
-                     <img src="assets/img/Micro-biology-image-2.png" alt="services-thumb">
+                     <img src="assets/img/Micro-biology-image-2.png" alt="services-thumb"  class="img-fluid">
                   </div>
                </div>
             </div>
@@ -387,13 +387,14 @@
       <!-- support-area-end -->
 
       <div class="container table_cunt">
-         <h2>Quality Lab Information</h2>
-         
+         <h2 class="fonttext_size_adjust">Quality Lab Information</h2>
+         <input type="text" id="testCodeFilter" class="search_tab_code mt-2" onkeyup="filterTable('testCodeFilter', 1)"
+         placeholder="Search by Test Code">
+      <input type="text" id="testNameFilter" class="search_tab_name mt-2" onkeyup="filterTable('testNameFilter', 2)"
+         placeholder="Search by Test Name">
+
          <div class="table-responsive" style="max-height:500px; overflow-y: auto;">
-             <input type="text" id="testCodeFilter" onkeyup="filterTable('testCodeFilter', 1)" placeholder="Search by Test Code">
-             <input type="text" id="testNameFilter" onkeyup="filterTable('testNameFilter', 2)" placeholder="Search by Test Name">
-             <!-- Add similar input boxes for other columns if needed -->
-             
+              
              <table>
                  <tr>
                      <th class="text-center">S.No</th>
