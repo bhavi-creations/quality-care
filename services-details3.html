@@ -180,7 +180,7 @@
    <div class="tpsideinfo tp-side-info-area">
       <button class="tpsideinfo__close"><i class="fal fa-times"></i></button>
       <div class="tpsideinfo__logo mb-40">
-         <a href="index.html"><img src="assets/img/logo (1).png" alt="logo"></a>
+         <a href="index.html"><img src="assets/img/footer logo.png" alt="logo"></a>
       </div>
 
       <div class="mobile-menu"></div>
@@ -379,23 +379,26 @@
       <!-- support-area-end -->
 
 
-      <div class="container  table_cunt">
+      <div class="container table_cunt">
          <h2>Quality Lab Information</h2>
-
+         
          <div class="table-responsive" style="max-height:500px; overflow-y: auto;">
-
-            <table>
-
-
-               <tr>
-                  <th class="text-center">s.no</th>
-                  <th class="text-center">Test Code</th>
-                  <th class="text-center">Test Name</th>
-                  <th class="text-center">Price</th>
-                  <th class="text-center">Special Price</th>
-                  <th class="text-center">Add to cart</th>
-               </tr>
-
+             <input type="text" id="testCodeFilter" onkeyup="filterTable('testCodeFilter', 1)" placeholder="Search by Test Code">
+             <input type="text" id="testNameFilter" onkeyup="filterTable('testNameFilter', 2)" placeholder="Search by Test Name">
+             <!-- Add similar input boxes for other columns if needed -->
+             
+             <table>
+                 <tr>
+                     <th class="text-center">S.No</th>
+                     <th class="text-center">Test Code</th>
+                     <th class="text-center">Test Name</th>
+                     <th class="text-center">Department</th>
+                     <th class="text-center">Price</th>
+                     <th class="text-center">Add to cart</th>
+                 </tr>
+                 <tr>
+                     <!-- Your table rows here -->
+                     
                <tr>
                   <td class="text-center">1</td>  
 
@@ -3227,14 +3230,33 @@
                 
                   <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>
                </tr>
-
-
-
-            </table>
-
+                 </tr>
+             </table>
          </div>
+     </div>
+     
+     <script>
+         function filterTable(inputId, columnIndex) {
+             var input, filter, table, tr, td, i, txtValue;
+             input = document.getElementById(inputId);
+             filter = input.value.toUpperCase();
+             table = document.querySelector(".table-responsive table");
+             tr = table.getElementsByTagName("tr");
+             for (i = 0; i < tr.length; i++) {
+                 td = tr[i].getElementsByTagName("td")[columnIndex];
+                 if (td) {
+                     txtValue = td.textContent || td.innerText;
+                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                         tr[i].style.display = "";
+                     } else {
+                         tr[i].style.display = "none";
+                     }
+                 }
+             }
+         }
+     </script>
 
-      </div>
+    
 
    </main>
    <!-- main-area-end -->
