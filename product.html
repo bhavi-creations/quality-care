@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+</head>
+<body>
+    <button class="add-to-car-btn" data-test-code="ALCOHOL" data-test-name="ALCOHOL SCREENING" data-price="1000.00">Add to car</button>
+
+    <script>
+        document.querySelectorAll(".add-to-car-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const testCode = this.getAttribute("data-test-code");
+                const testName = this.getAttribute("data-test-name");
+                const price = this.getAttribute("data-price");
+
+                const product = {
+                    testCode: testCode,
+                    testName: testName,
+                    price: price
+                };
+
+                // Retrieve existing car items from local storage
+                let carItems = JSON.parse(localStorage.getItem("car")) || [];
+                // Add the new product to the car
+                carItems.push(product);
+                // Save updated car items back to local storage
+                localStorage.setItem("car", JSON.stringify(carItems));
+
+                alert("Product added to car!");
+            });
+        });
+    </script>
+</body>
+</html>

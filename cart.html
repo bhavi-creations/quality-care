@@ -238,6 +238,138 @@
             <div class="container">
                <div class="row">
                   <h2 class="text-center">Cart Items</h2>
+
+                  <div class="col-12">
+                     <div id="cart-items" class="table-content table-responsive"></div>
+                 
+                     <div class="col-lg-6 col-md-12 ms-auto">
+                         <div class="cart-page-total">
+                             <ul class="mb-20">
+                                 <li>Total <span id="totalAmount">$0.00</span></li>
+                             </ul>
+                         </div>
+                     </div>
+                 
+                     <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
+                         <div class="container">
+                           <form action="#" method="post">
+                              <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                       <div class="checkbox-form">
+                                          <h3>Customer Details</h3>
+                                          <div class="row">
+                                                 <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>First Name <span class="required">*</span></label>
+                                                      <input name="first_name" type="text" placeholder="" required />
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Last Name <span class="required">*</span></label>
+                                                      <input name="last_name" type="text" placeholder="" required />
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Address-1<span class="required">*</span></label>
+                                                      <input name="address" type="text" placeholder="D.no, Apartment " required/>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Address-2<span class="required">*</span></label>
+                                                      <input name="address2" type="text" placeholder="Street address" required/>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Town / City <span class="required">*</span></label>
+                                                      <input name="location" type="text" placeholder="Town / City" required/>
+                                                   </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Pin code <span class="required">*</span></label>
+                                                      <input name="pin_code" type="text" placeholder="Postcode  " required/>
+                                                   </div>
+                                                </div>
+                                               
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Phone <span class="required">*</span></label>
+                                                      <input name="number" type="text" placeholder=" " required/>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <div class="checkout-form-list">
+                                                      <label>Email Address <span class="required">*</span></label>
+                                                      <input name="mail" type="email" placeholder="" required/>
+                                                   </div>
+                                                </div>
+                                             
+                                             </div>
+                                       
+                                       </div>
+                                    </div>
+
+
+                              </div>
+                           </form>
+                         </div>
+                     </section>
+                 </div>
+                 
+                 <script>
+                     // Retrieve cart items from local storage
+                     const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+                 
+                     // Display cart items on the cart page
+                     const cartContainer = document.getElementById("cart-items");
+                     let totalAmount = 0;
+                     cartItems.forEach((item, index) => {
+                         const productHTML = `
+                             <div class="product" data-index="${index}">
+                                 <div class="row">
+                                     <div class="col-lg-2 col-md-2 product-thumbnail text-center   "  >  ${index + 1}</div>
+                                     <div class="col-lg-2 col-md-2 product-thumbnail">${item.testCode}</div>
+                                     <div class="col-lg-4 col-md-4 cart-product-name">${item.testName}</div>
+                                     <div class="col-lg-2 col-md-2 product-price text-center">${item.price}</div>
+                                     <div class="col-lg-2 col-md-2 product-quantity text-center">
+                                         <input class="cart-input" type="text" value="1"/>
+                                     </div>
+                                     <div class="col-lg-2 col-md-2 product-subtotal text-center">${item.price}</div>
+                                     <div class="col-lg-2 col-md-2 product-remove text-center"><a href="#" class="remove-item">Remove</a></div>
+                                 </div>
+                             </div>
+                             <hr>
+                         `;
+                         cartContainer.innerHTML += productHTML;
+                         totalAmount += parseFloat(item.price);
+                     });
+                 
+                     document.getElementById("totalAmount").innerText = "$" + totalAmount.toFixed(2);
+                 
+                     // Add event listeners for removing items
+                     const removeButtons = document.querySelectorAll(".remove-item");
+                     removeButtons.forEach(button => {
+                         button.addEventListener("click", function(event) {
+                             const productIndex = event.target.closest(".product").dataset.index;
+                             cartItems.splice(productIndex, 1);
+                             localStorage.setItem("cart", JSON.stringify(cartItems));
+                             location.reload(); // Refresh the page to reflect changes
+                         });
+                     });
+                 </script>
+                 
+
+
+
+
+
+
                   <div class="col-12">
                         <form action="cartMail.php" method="post">
                            <div class="table-content table-responsive">
@@ -247,16 +379,21 @@
                                           <th class="product-thumbnail  text-center">SNo.</th>
                                           <th class="product-thumbnail   text-center">Test Code</th>
                                           <th class="cart-product-name  text-center">Test Name</th>
-                                          <th class="product-price  text-center">Special Price Per Unit</th>
+                                          <th class="product-price  text-center"> Price Per Unit</th>
                                           <th class="product-quantity  text-center">Quantity</th>
                                           <th class="product-subtotal  text-center">Total</th>
                                           <th class="product-remove  text-center" id="remove">Remove</th>
                                        </tr>
                                     </thead>
+
+                                    
+
+
+
                                     <tbody >
                                        <tr>
                                           <td class="product-price  text-center"><span class="amount">1</span></td>
-                                          <td class="product-thumbnail"><a href="shop-details.html"> fdgfd</a></td>
+                                          <td class="product-thumbnail">  fdgfd </td>
                                           <td class="product-name"><a href="shop-details.html">Master Web Design in Adobe XD</a></td>
                                           <td class="product-price text-center"><span class="amount">$130.00</span></td>
                                           <td class="product-quantity text-center">
@@ -281,22 +418,23 @@
                                           <td class="product-remove  text-center" ><a href="#"><i class="fa-solid fa-trash"></i></a></td>
                                        </tr>
                                     </tbody>
+
+
+
                               </table>
                            </div>
 
-                           <!-- cart totals -->
+                           
                            <div class="col-lg-6 col-md-12 ms-auto">
                               <div class="cart-page-total">
                               
                                  <ul class="mb-20">
                                      <li>Total <span>$250.00</span></li>
                                  </ul>
-                                 <!-- <a href="checkout.html"><button class="tp-btn">Proceed to checkout</button></a>  -->
-                              </div>
+                               </div>
                            </div>
 
-                           <!-- checkout-area start -->
-                           <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
+                            <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
                               <div class="container">
                                  <form action="#" method="post">
                                     <div class="row">
@@ -361,20 +499,12 @@
                                              </div>
                                           </div>
 
-<!-- 
-                                          <div class="col-lg-12">
-                                             <div class="contactform__input mb-30-btn">
-                                                <button type="submit" class="tp-btn">Send Massage</button>
-                                             </div>
-                                             <p class="ajax-response"></p>
-                                          </div> -->
-                                        
+ 
                                     </div>
                                  </form>
                               </div>
                            </section>
-                           <!-- checkout-area end -->
-
+                 
 
                            
                         </form> 
