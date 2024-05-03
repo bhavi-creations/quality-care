@@ -5144,6 +5144,7 @@
                </tr>
             </table>
          </div>
+
          <script>
             document.querySelectorAll(".add-to-cart-btn").forEach(button => {
                 button.addEventListener("click", function () {
@@ -5179,10 +5180,11 @@
                         cartIcon.innerHTML = '&hearts;'; // Set inner HTML to heart symbol
                         // Change the color of the cart icon to green
                         this.querySelector('i').style.color = '#47ab04';
-                    } else {
-                        // Optional: Alert the user that the product is already in the cart
-                        alert("This product is already in the cart.");
-                    }
+                    } 
+                  //   else {
+                        
+                  //       alert("This product is already in the cart.");
+                  //   }
                 });
             });
         </script>

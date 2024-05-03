@@ -282,80 +282,117 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Amount <span id="totalAmount">$0.00</span></li>
+                           <li>Total Amount <span id="totalAmount">₹0.00</span></li>
                         </ul>
                      </div>
                   </div>
 
                   <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
                      <div class="container">
-                        <form action="#" method="post">
+                        <form id="customer-details-form" action="#" method="post">
                            <div class="row">
-                              <div class="col-lg-12 col-md-12">
-                                 <div class="checkbox-form">
-                                    <h3>Customer Details</h3>
-                                    <div class="row">
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>First Name <span class="required">*</span></label>
-                                             <input name="first_name" type="text" placeholder="" required />
-                                          </div>
+                               <div class="col-lg-12 col-md-12">
+                                   <div class="checkbox-form">
+                                       <h3>Customer Details</h3>
+                                       <div class="row">
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>First Name <span class="required">*</span></label>
+                                                   <input name="first_name" type="text" placeholder="" required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Last Name <span class="required">*</span></label>
+                                                   <input name="last_name" type="text" placeholder="" required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Address-1<span class="required">*</span></label>
+                                                   <input name="address" type="text" placeholder="D.no, Apartment " required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Address-2<span class="required">*</span></label>
+                                                   <input name="address2" type="text" placeholder="Street address" required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Town / City <span class="required">*</span></label>
+                                                   <input name="location" type="text" placeholder="Town / City" required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Pin code <span class="required">*</span></label>
+                                                   <input name="pin_code" type="text" placeholder="Postcode  " required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Phone <span class="required">*</span></label>
+                                                   <input name="number" type="text" placeholder=" " required />
+                                               </div>
+                                           </div>
+                                           <div class="col-md-6">
+                                               <div class="checkout-form-list">
+                                                   <label>Email Address <span class="required">*</span></label>
+                                                   <input name="mail" type="email" placeholder="" required />
+                                               </div>
+                                           </div>
                                        </div>
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Last Name <span class="required">*</span></label>
-                                             <input name="last_name" type="text" placeholder="" required />
-                                          </div>
-                                       </div>
-
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Address-1<span class="required">*</span></label>
-                                             <input name="address" type="text" placeholder="D.no, Apartment "
-                                                required />
-                                          </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Address-2<span class="required">*</span></label>
-                                             <input name="address2" type="text" placeholder="Street address" required />
-                                          </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Town / City <span class="required">*</span></label>
-                                             <input name="location" type="text" placeholder="Town / City" required />
-                                          </div>
-                                       </div>
-
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Pin code <span class="required">*</span></label>
-                                             <input name="pin_code" type="text" placeholder="Postcode  " required />
-                                          </div>
-                                       </div>
-
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Phone <span class="required">*</span></label>
-                                             <input name="number" type="text" placeholder=" " required />
-                                          </div>
-                                       </div>
-                                       <div class="col-md-6">
-                                          <div class="checkout-form-list">
-                                             <label>Email Address <span class="required">*</span></label>
-                                             <input name="mail" type="email" placeholder="" required />
-                                          </div>
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-                              </div>
-
-
+                                   </div>
+                               </div>
                            </div>
-                        </form>
+                       
+                           <div class="row">
+    <div class="col-md-6">
+        <div class="d-flex justify-content-start">
+            <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="validateForm()">ADD MORE</button>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="d-flex justify-content-end">
+            <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="submitForm()">Proceed to Buy</button>
+        </div>
+    </div>
+</div>
+
+                       </form>
+                       
+                       <script>
+                        function validateForm() {
+                            // Get all input fields
+                            var inputs = document.getElementById("customer-details-form").getElementsByTagName("input");
+                            var isValid = true;
+                            // Check if all input fields are filled
+                            for (var i = 0; i < inputs.length; i++) {
+                                if (!inputs[i].value) {
+                                    isValid = false;
+                                    break;
+                                }
+                            }
+                            // Display error message if any field is empty
+                            if (!isValid) {
+                                alert("Please fill in all required fields.");
+                            }
+                            return isValid; // Return the validation result
+                        }
+                    
+                        function submitForm() {
+                            // Validate the form
+                            var isValid = validateForm();
+                            // If all fields are filled and the form is valid, redirect to another page
+                            if (isValid) {
+                                window.location.href = "checkout.html"; // Change the URL to the desired destination
+                            }
+                        }
+                       </script>
+                    
+                       
                      </div>
                   </section>
                </div>
@@ -426,7 +463,7 @@
                      totalAmount += parseFloat(item.price);
                   });
 
-                  document.getElementById("totalAmount").innerText = "$" + totalAmount.toFixed(2);
+                  document.getElementById("totalAmount").innerText = "₹" + totalAmount.toFixed(2);
 
                   // Add event listeners for changing quantity
                   const quantityInputs = document.querySelectorAll(".cart-input");
@@ -438,7 +475,7 @@
                         const subtotal = quantity * pricePerUnit;
                         cartItems[index].quantity = quantity;
                         cartItems[index].subtotal = subtotal;
-                        event.target.closest("tr").querySelector(".product-subtotal").textContent = "$" + subtotal.toFixed(2);
+                        event.target.closest("tr").querySelector(".product-subtotal").textContent = "₹" + subtotal.toFixed(2);
                         updateTotal();
                         localStorage.setItem("cart", JSON.stringify(cartItems));
                      });
@@ -458,8 +495,46 @@
 
                   function updateTotal() {
                      totalAmount = cartItems.reduce((acc, item) => acc + item.subtotal, 0);
-                     document.getElementById("totalAmount").innerText = "$" + totalAmount.toFixed(2);
+                     document.getElementById("totalAmount").innerText = "₹" + totalAmount.toFixed(2);
                   }
+                  function addItemToCart(item) {
+                     // Add item to cart logic
+                     cartItems.push(item);
+
+                     // Save cart items to local storage
+                     localStorage.setItem("cart", JSON.stringify(cartItems));
+                  }
+
+                  function removeItemFromCart(index) {
+                     // Remove item from cart logic
+                     cartItems.splice(index, 1);
+
+                     // Save cart items to local storage
+                     localStorage.setItem("cart", JSON.stringify(cartItems));
+                  }
+
+
+                  function updateCart() {
+                     // Update cart logic
+
+                     // Save cart items to local storage
+                     localStorage.setItem("cart", JSON.stringify(cartItems));
+                  }
+
+
+                  try {
+                     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+                  } catch (error) {
+                     console.error("Error parsing cart items from local storage:", error);
+                     // Handle the error, like resetting the cart items
+                     cartItems = [];
+                  }
+
+
+                  function clearCart() {
+                     localStorage.removeItem("cart");
+                  }
+
                </script>
 
 
@@ -467,7 +542,7 @@
 
 
 
-
+<!-- 
                <div class="col-6  d-flex flex-row justify-content-start">
                   <a class="header-bottom-btn" style="border-radius: 8px;" href="./services.html">ADD MORE</a>
 
@@ -475,8 +550,7 @@
 
                <div class="col-6 d-flex flex-row justify-content-end">
                   <a class="header-bottom-btn" style=" border-radius: 8px;" href="./checkout.html ">Proceed to Buy</a>
-
-               </div>
+               </div> -->
 
             </div>
 
@@ -512,13 +586,13 @@
                                  <td class="product-thumbnail"> fdgfd </td>
                                  <td class="product-name"><a href="shop-details.html">Master Web Design in Adobe XD</a>
                                  </td>
-                                 <td class="product-price text-center"><span class="amount">$130.00</span></td>
+                                 <td class="product-price text-center"><span class="amount">₹130.00</span></td>
                                  <td class="product-quantity text-center">
                                     <span class="cart-minus">-</span>
                                     <input class="cart-input" type="text" value="1" />
                                     <span class="cart-plus">+</span>
                                  </td>
-                                 <td class="product-subtotal  text-center"><span class="amount">$130.00</span></td>
+                                 <td class="product-subtotal  text-center"><span class="amount">₹130.00</span></td>
                                  <td class="product-remove  text-center"> <i class="fa-solid fa-trash"></i> </td>
                               </tr>
 
@@ -529,13 +603,13 @@
                                  <td class="product-thumbnail"><a href="shop-details.html">drg</a></td>
                                  <td class="product-name"><a href="shop-details.html">How to Write Great Web Content</a>
                                  </td>
-                                 <td class="product-price  text-center"><span class="amount">$120.50</span></td>
+                                 <td class="product-price  text-center"><span class="amount">₹120.50</span></td>
                                  <td class="product-quantity text-center   ">
                                     <span class="cart-minus">-</span>
                                     <input class="cart-input" type="text" value="1" />
                                     <span class="cart-plus">+</span>
                                  </td>
-                                 <td class="product-subtotal  text-center"><span class="amount">$120.50</span></td>
+                                 <td class="product-subtotal  text-center"><span class="amount">₹120.50</span></td>
                                  <td class="product-remove  text-center"><a href="#"><i
                                           class="fa-solid fa-trash"></i></a></td>
                               </tr>
@@ -551,7 +625,7 @@
                         <div class="cart-page-total">
 
                            <ul class="mb-20">
-                              <li>Total <span>$250.00</span></li>
+                              <li>Total <span>₹250.00</span></li>
                            </ul>
                         </div>
                      </div>

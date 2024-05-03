@@ -9744,3 +9744,13 @@ th {
 .only_margin_top{
   margin-top: 40px;
 }
+
+
+
+.test_code{
+  padding-left: 10px !important;
+}
+.test_price{
+  padding-left: 10px !important;
+
+}
