@@ -289,108 +289,35 @@
 
                   <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
                      <div class="container">
-                        <form id="customer-details-form" action="#" method="post">
-                           <div class="row">
-                               <div class="col-lg-12 col-md-12">
-                                   <div class="checkbox-form">
-                                       <h3>Customer Details</h3>
-                                       <div class="row">
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>First Name <span class="required">*</span></label>
-                                                   <input name="first_name" type="text" placeholder="" required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Last Name <span class="required">*</span></label>
-                                                   <input name="last_name" type="text" placeholder="" required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Address-1<span class="required">*</span></label>
-                                                   <input name="address" type="text" placeholder="D.no, Apartment " required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Address-2<span class="required">*</span></label>
-                                                   <input name="address2" type="text" placeholder="Street address" required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Town / City <span class="required">*</span></label>
-                                                   <input name="location" type="text" placeholder="Town / City" required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Pin code <span class="required">*</span></label>
-                                                   <input name="pin_code" type="text" placeholder="Postcode  " required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Phone <span class="required">*</span></label>
-                                                   <input name="number" type="text" placeholder=" " required />
-                                               </div>
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="checkout-form-list">
-                                                   <label>Email Address <span class="required">*</span></label>
-                                                   <input name="mail" type="email" placeholder="" required />
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
+                  
+                       <div class="row">
+                        <div class="col-md-6">
+                           <div class="d-flex justify-content-start">
+                                 <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="addmore( )" >ADD MORE</button>
                            </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="d-flex justify-content-end">
+                              <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="redirectToAnotherPage()">Proceed to Buy</button>
+                          </div>
+                          
+                        </div>
+                     </div>
                        
-                           <div class="row">
-    <div class="col-md-6">
-        <div class="d-flex justify-content-start">
-            <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="validateForm()">ADD MORE</button>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="d-flex justify-content-end">
-            <button class="header-bottom-btn" style="border-radius: 8px;" type="button" onclick="submitForm()">Proceed to Buy</button>
-        </div>
-    </div>
-</div>
+                      <script>
+                        function redirectToAnotherPage() {
+                           // Redirect to another page
+                           window.location.href = "checkout.html";
+                        }
 
-                       </form>
-                       
-                       <script>
-                        function validateForm() {
-                            // Get all input fields
-                            var inputs = document.getElementById("customer-details-form").getElementsByTagName("input");
-                            var isValid = true;
-                            // Check if all input fields are filled
-                            for (var i = 0; i < inputs.length; i++) {
-                                if (!inputs[i].value) {
-                                    isValid = false;
-                                    break;
-                                }
-                            }
-                            // Display error message if any field is empty
-                            if (!isValid) {
-                                alert("Please fill in all required fields.");
-                            }
-                            return isValid; // Return the validation result
+
+                        function addmore() {
+                           // Redirect to another page
+                           window.location.href = "services-details1.html";
                         }
-                    
-                        function submitForm() {
-                            // Validate the form
-                            var isValid = validateForm();
-                            // If all fields are filled and the form is valid, redirect to another page
-                            if (isValid) {
-                                window.location.href = "checkout.html"; // Change the URL to the desired destination
-                            }
-                        }
-                       </script>
+
+
+                     </script>
                     
                        
                      </div>
