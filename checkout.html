@@ -327,7 +327,7 @@
                            </div>
                            <div class="col-md-12">
                               <div class="checkout-form-list">
-                                 <input type="text" placeholder="Apartment, suite, unit etc. (optional)" required />
+                                 <input type="text" placeholder="Apartment, suite, unit etc. (optional)"   />
                               </div>
                            </div>
                            <div class="col-md-12">
@@ -583,51 +583,59 @@
 
                   <script>
                      document.addEventListener("DOMContentLoaded", function () {
-                        // Retrieve cart items from local storage
-                        let cartItems = [];
-                        try {
-                           cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-                        } catch (error) {
-                           console.error("Error parsing cart items from local storage:", error);
-                           // Handle the error, like resetting the cart items
-                           cartItems = [];
-                        }
+                         // Retrieve cart items from local storage
+                         let cartItems = [];
+                         try {
+                             cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+                         } catch (error) {
+                             console.error("Error parsing cart items from local storage:", error);
+                             // Handle the error, like resetting the cart items
+                             cartItems = [];
+                         }
+                 
+                         // Assuming you have a table with ID "checkout-items" to display the cart items
+                         const checkoutContainer = document.getElementById("checkout-items");
+                         let totalAmount = 0;
+                         cartItems.forEach((item, index) => {
+                             const row = document.createElement("tr");
+                 
+                             // Create table cells for each item property
+                             const cellCode = document.createElement("td");
+                             // Concatenate text code and quantity with *
+                             cellCode.classList.add("test_code");
+                             cellCode.textContent = item.testCode + "   *   " + item.quantity;
+                 
+                             //   const cellPrice = document.createElement("td");
+                             //   cellPrice.textContent = item.price;
+                 
+                 
+                             const cellSubtotal = document.createElement("td");
+                             const subtotal = item.quantity * parseFloat(item.price)  ;
+                             cellSubtotal.classList.add("test_price");
 
-                        // Assuming you have a table with ID "checkout-items" to display the cart items
-                        const checkoutContainer = document.getElementById("checkout-items");
-                        let totalAmount = 0;
-                        cartItems.forEach((item, index) => {
-                           const row = document.createElement("tr");
-
-                           // Create table cells for each item property
-                           // Adjust this based on your HTML structure
-
-                           const cellName = document.createElement("td");
-                           // Add a class to style testCode
-                           cellName.classList.add("test_code");
-                           cellName.textContent = item.testCode;
-
-                           const cellPrice = document.createElement("td");
-                           cellPrice.classList.add("test_price");
-
-                           cellPrice.textContent = item.price;
-
-                           // Append cells to the row
-                           row.appendChild(cellName);
-                           row.appendChild(cellPrice);
-
-                           // Append the row to the checkout container
-                           checkoutContainer.appendChild(row);
-
-                           // Calculate total amount
-                           totalAmount += parseFloat(item.price);
-                        });
-
-                        // Display total amount
-                        document.getElementById("checkout-totalAmount").innerText = "₹" + totalAmount.toFixed(2);
+                             cellSubtotal.textContent = "₹"+ subtotal.toFixed(2);
+                 
+                             const cellQuantity = document.createElement("td");
+                             cellQuantity.textContent = item.quantity; // Assuming you have "quantity" property in cart items
+                 
+                             // Append cells to the row
+                             row.appendChild(cellCode);
+                             //   row.appendChild(cellPrice);
+                             row.appendChild(cellSubtotal);
+                           //   row.appendChild(cellQuantity);
+                 
+                             // Append the row to the checkout container
+                             checkoutContainer.appendChild(row);
+                 
+                             // Calculate total amount
+                             totalAmount += subtotal;
+                         });
+                 
+                         // Display total amount
+                         document.getElementById("checkout-totalAmount").innerText = "₹" + totalAmount.toFixed(2);
                      });
-                  </script>
-           
+                 </script>
+
                </div>
             </form>
          </div>
