@@ -1,6 +1,3 @@
-   
-
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -32,7 +29,7 @@
 </head>
 
 <body>
- 
+
 
    <!-- Scroll-top -->
    <button class="scroll-top scroll-to-target" data-target="html">
@@ -196,7 +193,7 @@
          <a href="#"><i class="fa-solid fa-star"></i> info@qualitycarelabs.com</a>
          <br>
          <a href="./cart.html"><i style="font-size: 30px; color: white;" class="fa-solid fa-cart-plus cart-icon"></i>
-             </a>
+         </a>
       </div>
 
       <div class="footer-widget__social mb-30">
@@ -355,6 +352,12 @@
          <input type="text" id="testNameFilter" class="search_tab_name mt-2" onkeyup="filterTable('testNameFilter', 2)"
             placeholder="Search by Test Name">
 
+
+
+
+
+
+
          <div class="table-responsive" style="max-height:500px; overflow-y: auto;">
 
             <table>
@@ -372,29 +375,29 @@
                <tr>
                   <td class="text-center">1</td>
 
-                  <td>ALCOHOL
+                  <td data-test-code>ALCOHOL
                   </td>
 
-                  <td> ALCOHOL SCREENING </td>
+                  <td data-test-name> ALCOHOL SCREENING </td>
                   <td> DEPARTMENT OF CLINICAL BIOCHEMISTRY</td>
-                  <td class="text-center">1000.00 </td>
+                  <td class="text-center" data-price>1000.00 </td>
 
 
-                  <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>
+                  <td class="text-center add-to-cart-btn"> <i class="fa-solid fa-cart-arrow-down"></i></td>
                </tr>
 
                <tr>
                   <td class="text-center">2</td>
 
-                  <td> BIOPLEU
+                  <td  data-test-code> BIOPLEU
                   </td>
 
 
-                  <td> BIOCHEMICAL ANALYSIS - PLEURAL FLUID </td>
+                  <td  data-test-name> BIOCHEMICAL ANALYSIS - PLEURAL FLUID </td>
                   <td> DEPARTMENT OF CLINICAL BIOCHEMISTRY</td>
-                  <td class="text-center"> 300.00 </td>
+                  <td class="text-center"  data-price> 300.00 </td>
 
-                  <td class="text-center"> <i class="fa-solid fa-cart-arrow-down"></i></td>
+                  <td class="text-center  add-to-cart-btn"> <i class="fa-solid fa-cart-arrow-down"></i></td>
                </tr>
 
                <tr>
@@ -5141,6 +5144,49 @@
                </tr>
             </table>
          </div>
+         <script>
+            document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    // Accessing data attributes using getAttribute method
+                    const testCode = this.parentElement.querySelector('[data-test-code]').innerText;
+                    const testName = this.parentElement.querySelector('[data-test-name]').innerText;
+                    const price = this.parentElement.querySelector('[data-price]').innerText;
+        
+                    // Create the product object
+                    const product = {
+                        testCode: testCode,
+                        testName: testName,
+                        price: price,
+                        quantity: 1 // Set initial quantity to 1
+                    };
+        
+                    // Retrieve existing cart items from local storage
+                    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        
+                    // Check if the product already exists in the cart
+                    const productExists = cartItems.some(item => item.testCode === testCode);
+        
+                    // If the product does not exist in the cart, add it
+                    if (!productExists) {
+                        cartItems.push(product);
+                        // Save updated cart items back to local storage
+                        localStorage.setItem("cart", JSON.stringify(cartItems));
+        
+                        // Change the cart icon appearance
+                        const cartIcon = this.querySelector('i');
+                        cartIcon.classList.add('added-to-cart'); // Add class to change color
+                        cartIcon.classList.remove('fa-cart-arrow-down'); // Remove default class
+                        cartIcon.innerHTML = '&hearts;'; // Set inner HTML to heart symbol
+                        // Change the color of the cart icon to green
+                        this.querySelector('i').style.color = '#47ab04';
+                    } else {
+                        // Optional: Alert the user that the product is already in the cart
+                        alert("This product is already in the cart.");
+                    }
+                });
+            });
+        </script>
+        
       </div>
 
       <script>
