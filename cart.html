@@ -261,6 +261,8 @@
 
                <div class="col-12">
                   <div class="table-content table-responsive">
+                     <h4>Services</h4>
+
                      <table class="table">
                         <thead>
                            <tr>
@@ -282,10 +284,53 @@
                   <div class="col-lg-6 col-md-12 ms-auto">
                      <div class="cart-page-total">
                         <ul class="mb-20">
-                           <li>Total Amount <span id="totalAmount">₹0.00</span></li>
+                           <li>Total Services Amount <span id="totalAmount">₹0.00</span></li>
                         </ul>
                      </div>
                   </div>
+
+
+
+
+
+                  <div class="table-content table-responsive">
+                     <h4>packages</h4>
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th class="product-thumbnail text-center">S.No</th>
+                              <th class="cart-product-name text-center">Package Name</th>
+                              <th class="product-thumbnail text-center">No. of Tests</th>
+                              <th class="product-price text-center">Price of Package</th>
+                              <th class="product-quantity text-center">Quantity</th>
+                              <th class="product-subtotal text-center">Total</th>
+                              <th class="product-remove text-center">Remove</th>
+                           </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                           <!-- Cart items will be dynamically inserted here -->
+                        </tbody>
+                     </table>
+                  </div>
+
+                  <div class="col-lg-6 col-md-12 ms-auto">
+                     <div class="cart-page-total">
+                        <ul class="mb-20">
+                           <li>Total Package Amount <span id="totalAmount">₹0.00</span></li>
+                        </ul>
+                     </div>
+                  </div>
+
+
+
+                  <div class="col-lg-6 col-md-12 ms-auto">
+                     <div class="cart-page-total">
+                        <ul class="mb-20">
+                           <li class="totalamount_last"><strong>   Total   Amount</strong> <span id="totalAmount"> <strong>₹0.00</strong></span></li>
+                        </ul>
+                     </div>
+                  </div>
+
 
                   <section class="checkout-area pb-10 wow fadeInUp mt-50" data-wow-duration=".8s" data-wow-delay=".2s">
                      <div class="container">
@@ -313,7 +358,7 @@
 
                         function addmore() {
                            // Redirect to another page
-                           window.location.href = "services-details1.html";
+                           window.location.href = "services.html";
                         }
 
 
@@ -323,6 +368,12 @@
                      </div>
                   </section>
                </div>
+
+
+
+
+
+
 
                <script>
                   // Retrieve cart items from local storage
